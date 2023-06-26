@@ -1,0 +1,128 @@
+--create database
+use secedb
+--creating new collection
+db.createCollection("balloon")
+--insert
+db.ballooncollection.insertMany([{bno:1,color:"green"},{bno:2,color:"blue"},{bno:3,color:"grey"},{bno:4,color:"violet"},{bno:5,color:"orange"}]);
+--to view
+o/p
+[{
+  "_id": {
+    "$oid": "6491ccc65ca79c547a152def"
+  }
+},
+{
+  "_id": {
+    "$oid": "6491ce8e5ca79c547a152df0"
+  },
+  "bno": 1,
+  "color": "green"
+},
+{
+  "_id": {
+    "$oid": "6491ce8e5ca79c547a152df1"
+  },
+  "bno": 2,
+  "color": "blue"
+},
+{
+  "_id": {
+    "$oid": "6491ce8e5ca79c547a152df2"
+  },
+  "bno": 3,
+  "color": "grey"
+},
+{
+  "_id": {
+    "$oid": "6491ce8e5ca79c547a152df3"
+  },
+  "bno": 4,
+  "color": "violet"
+},
+{
+  "_id": {
+    "$oid": "6491ce8e5ca79c547a152df4"
+  },
+  "bno": 5,
+  "color": "orange"
+},
+{
+  "_id": {
+    "$oid": "6491d0dc5ca79c547a152df5"
+  },
+  "bno": 6,
+  "color": "red"
+},
+--
+db.ballooncollection.insertOne({bno:7,color:"red"});
+
+--to find particular color
+db.ballooncollection.find({color:'red'});
+o/p: _id: ObjectId("6491d0dc5ca79c547a152df5"),
+  bno: 6,
+  color: 'red'
+   _id: ObjectId("6491d50c5ca79c547a152df6"),
+  bno: 7,
+  color: 'red'
+  
+--to find particular color in sorting order
+db.ballooncollection.find({color:"red"}).sort({bno:-1})
+o/p:
+ _id: ObjectId("6491d50c5ca79c547a152df6"),
+  bno: 7,
+  color: 'red'
+  _id: ObjectId("6491d0dc5ca79c547a152df5"),
+  bno: 6,
+  color: 'red'
+  
+  --to sort
+  db.ballooncollection.find().sort({bno:1})
+{
+  "_id": {
+    "$oid": "6491ce8e5ca79c547a152df0"
+  },
+  "bno": 1,
+  "color": "green"
+},
+{
+  "_id": {
+    "$oid": "6491ce8e5ca79c547a152df1"
+  },
+  "bno": 2,
+  "color": "blue"
+},
+{
+  "_id": {
+    "$oid": "6491ce8e5ca79c547a152df2"
+  },
+  "bno": 3,
+  "color": "grey"
+},
+{
+  "_id": {
+    "$oid": "6491ce8e5ca79c547a152df3"
+  },
+  "bno": 4,
+  "color": "violet"
+},
+{
+  "_id": {
+    "$oid": "6491ce8e5ca79c547a152df4"
+  },
+  "bno": 5,
+  "color": "orange"
+},
+{
+  "_id": {
+    "$oid": "6491d0dc5ca79c547a152df5"
+  },
+  "bno": 6,
+  "color": "red"
+},
+{
+  "_id": {
+    "$oid": "6491d50c5ca79c547a152df6"
+  },
+  "bno": 7,
+  "color": "red"
+}]
