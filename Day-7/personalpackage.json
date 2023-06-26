@@ -1,0 +1,23 @@
+
+{
+    "name":"Dhatchayani Arun",
+    "college":"SECE",
+    "dep":"CSE",
+    "age":"19",
+    "place":"Coimbatore",
+    "mobile":"7397168226",
+    "address":{
+        "block no":"SF No:611,Sri Sakthi Coach",
+        "area":"Kulathupalayam",
+        "post":"Pavitharam",
+        "place":"Karur",
+        "pin-code":"639002"
+    },
+    "parents":{
+        "father-name":"Arun",
+        "mother-name":"Sudha",
+        "fathers-occupation":"Manager",
+        "mothers-occupation":"Lic-Agent"
+    }
+
+}
